@@ -15,6 +15,10 @@ body.large-text {
 	font-size: 14px;
 }
 
+div#items {
+	padding-top: 3em;
+}
+
 div.news-item {
 	border: 0.1em solid darkgrey;
 	padding: 0.3em;
@@ -25,14 +29,9 @@ div.news-item {
 }
 
 div.news-item.horizontal {
-	margin-top: 3em;
 	float: left;
 	width: 20em;
 	overflow: hidden;
-}
-
-div.news-item.vertical:first-child {
-	margin-top: 3em;
 }
 
 h1 {

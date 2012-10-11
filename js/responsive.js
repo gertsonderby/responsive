@@ -4,18 +4,18 @@ Responsive = {
 	init: function () {
 		R = this;
 		$(document).ready(function () {
-			R.setDirection();
 			R.setTextSize();
+			R.setDirection();
 			$(window).resize(function () {
-				R.setDirection();
 				R.setTextSize();
+				R.setDirection();
 			});
 		});
 	},
 
 	setTextSize: function () {
 		viewport = this.getWindowSize();
-		if (viewport.h > 700 || viewport.w > 700) {
+		if (viewport.h > 900 || viewport.w > 900) {
 			// Large font size
 			$('body').removeClass();
 			$('body').addClass('large-text');
@@ -41,9 +41,9 @@ Responsive = {
 			$('.news-item, #items').addClass('horizontal');
 			$('.news-item, #items').removeClass('vertical');
 			width = this.horizontal_item_width * $('.news-item').length;
-			console.log(width);
 			$('#items').width((width) + 'em');
-			$('.news-item').css('max-height', viewport.h - 80);
+			header_height = parseInt($('h1').outerHeight()) + 35; // FIXME: Not optimal way of doing this. Unlimkely to work cross-browser.
+			$('.news-item').css('max-height', viewport.h - header_height);
 		}
 	},
 
