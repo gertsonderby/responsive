@@ -36,14 +36,14 @@ Responsive = {
 			$('.news-item, #items').addClass('vertical');
 			$('.news-item, #items').removeClass('horizontal');
 			$('#items').width('auto');
-			$('.news-item').css('height', 'auto');
+			$('.news-item').height('auto');
 		} else {
 			$('.news-item, #items').addClass('horizontal');
 			$('.news-item, #items').removeClass('vertical');
 			width = this.horizontal_item_width * $('.news-item').length;
 			$('#items').width((width) + 'em');
-			header_height = parseInt($('h1').outerHeight()) + 35; // FIXME: Not optimal way of doing this. Unlimkely to work cross-browser.
-			$('.news-item').css('max-height', viewport.h - header_height);
+			header_height = parseInt($('h1').outerHeight()) + 35; // FIXME: Not optimal way of doing this. Unlikely to work cross-browser.
+			$('.news-item').height(viewport.h - header_height);
 		}
 	},
 
